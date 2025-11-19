@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "countryName": "India",
+    "capital": "New Delhi",
+    "population": 1428627663,
+    "interestingFact": "India has the world’s largest democracy."
+  },
+  {
+    "id": 2,
+    "countryName": "United States",
+    "capital": "Washington, D.C.",
+    "population": 339996563,
+    "interestingFact": "The U.S. has the world’s largest economy by nominal GDP."
+  },
+  {
+    "id": 3,
+    "countryName": "Japan",
+    "capital": "Tokyo",
+    "population": 123294513,
+    "interestingFact": "Tokyo is one of the most populous metropolitan areas in the world."
+  },
+  {
+    "id": 4,
+    "countryName": "Brazil",
+    "capital": "Brasília",
+    "population": 203080756,
+    "interestingFact": "Brazil is home to most of the Amazon rainforest."
+  },
+  {
+    "id": 5,
+    "countryName": "Germany",
+    "capital": "Berlin",
+    "population": 83369843,
+    "interestingFact": "Germany is known for its engineering and automobile industry."
+  },
+  {
+    "id": 6,
+    "countryName": "Australia",
+    "capital": "Canberra",
+    "population": 26897491,
+    "interestingFact": "Australia is the only country that is also a continent."
+  },
+  {
+    "id": 7,
+    "countryName": "Canada",
+    "capital": "Ottawa",
+    "population": 38685307,
+    "interestingFact": "Canada has more lakes than any other country."
+  },
+  {
+    "id": 8,
+    "countryName": "France",
+    "capital": "Paris",
+    "population": 65426179,
+    "interestingFact": "France is the most visited country in the world by tourists."
+  },
+  {
+    "id": 9,
+    "countryName": "South Africa",
+    "capital": "Pretoria (administrative)",
+    "population": 60414495,
+    "interestingFact": "South Africa has three capital cities and 11 official languages."
+  },
+  {
+    "id": 10,
+    "countryName": "Italy",
+    "capital": "Rome",
+    "population": 58870762,
+    "interestingFact": "Rome is home to Vatican City, the smallest country in the world."
+  }
+]

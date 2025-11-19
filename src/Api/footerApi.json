@@ -1,0 +1,17 @@
+[
+    {
+        "icon": "MdPlace",
+        "title": "Find us",
+        "details": "Mohali, Chandigarh"
+    },
+    {
+        "icon": "IoCallSharp",
+        "title": "Call us",
+        "details": "6280266561"
+    },
+    {
+        "icon": "TbMailPlus",
+        "title": "Mail us",
+        "details": "vanshchhoda28@gmail.com"
+    }
+]
