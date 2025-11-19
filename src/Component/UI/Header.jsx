@@ -1,31 +1,35 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+// Header.jsx
+import React, { useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Header = () => {
-  return (
-    <>
-      <header>
-        <div className='container'>
-          <div className='grid navbar-grid'>
-            <div className='Logo'>
-              <NavLink to="/">
-                <h1>World Atlas</h1>
-              </NavLink>
-            </div>
-            
-            <nav>
-              <ul>
-                <li><NavLink to="/">Home</NavLink></li>
-                <li><NavLink to="/about">About</NavLink></li>
-                <li><NavLink to="/country">Country</NavLink></li>
-                <li><NavLink to="/contact">Contact</NavLink></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </header>
-    </>
-  )
-}
+  const [open, setOpen] = useState(false);
 
-export default Header
+  return (
+    <header>
+      <div className="container navbar-grid">
+
+        {/* Logo */}
+        <h2 style={{ color: "#fff" }}>WorldAtlas</h2>
+
+        {/* Hamburger Icon */}
+        <div className="ham-menu" onClick={() => setOpen(!open)}>
+          <GiHamburgerMenu />
+        </div>
+
+        {/* Nav Links */}
+        <nav>
+          <ul className={open ? "active" : ""}>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/countries">Countries</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+  );
+};
+
+export default Header;
