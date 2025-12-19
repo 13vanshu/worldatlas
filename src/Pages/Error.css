@@ -1,0 +1,56 @@
+/* Full Page Center */
+.error-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background: #f8f9fa;
+  font-family: "Inter", sans-serif;
+  color: #333;
+}
+
+/* Big 404 */
+.error-code {
+  font-size: 8rem;
+  font-weight: 800;
+  margin: 0;
+  color: #6c63ff;
+}
+
+/* Title */
+.error-title {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Error message */
+.error-message {
+  max-width: 500px;
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+/* Home button */
+.error-btn {
+  padding: 12px 28px;
+  background: #6c63ff;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(108, 99, 255, 0.3);
+  transition: all 0.2s ease;
+}
+
+.error-btn:hover {
+  background: #574bff;
+  transform: translateY(-2px);
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import countryFacts from "../Api/countryData.json"
+import './About.css'; 
 
 const About = () => {
   return (

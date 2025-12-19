@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,12 +8,12 @@
     background-color: #202020;
 }
 
-html{
+html {
     font-size: 62.5%;
     font-family: "urbanist";
 }
 
-body{
+body {
     background-color: black;
 }
 
@@ -30,30 +30,30 @@ h6 {
 p,
 li,
 a,
-button{
+button {
     font-size: 1.7rem;
     letter-spacing: 0.1rem;
     line-height: 1.6;
     color: #fff;
 }
 
-li{
+li {
     list-style: none;
 
-    
+
 }
 
-a{
+a {
     color: #000;
-    text-decoration: none; 
+    text-decoration: none;
     font-size: 2rem;
 
-    & :hover{
+    & :hover {
         color: #2e86c1;
     }
 }
 
-button{
+button {
     display: flex;
     gap: 1.2rem;
     align-items: center;
@@ -73,278 +73,32 @@ button{
     color: #000;
 }
 
-.container{
+.container {
     max-width: 140rem;
     margin: auto;
 }
 
-.grid{
+.grid {
     display: grid;
 }
 
-.grid-two-cols{
-    grid-template-columns: repeat(2,1fr);
+.grid-two-cols {   
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.grid-three-cols{
-    grid-template-columns: repeat(3,1fr);   
+.grid-three-cols {
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.grid-four-cols{
-    grid-template-columns: repeat(4,1fr);
-}
-
-/*Layout*/
-
-header{
-    height: 9rem;
-    box-shadow: 0px 10px 10px -10px;
-    background-color: #202020;
-    width: 100%;
-
-    & .container{
-        height: 10rem;
-    }
-}
-
-.navbar-grid {
-    grid-template-columns: 0.5fr 1fr;
-    align-items: center;
-    height: 10rem;
-    padding: 0 3.2rem;
-}
-
-nav ul{
-    display: flex;
-    justify-content: flex-end;
-    gap: 5rem;
-    color: #fff;
-
-    & li a{
-        color: #fff;
-    }
-}
-
-.ham-menu {
-    display: none;
+.grid-four-cols {
+    grid-template-columns: repeat(4, 1fr);
 }
 
 /* hero Section */
 
-.hero-section .container{
-    padding: 3.2rem;
-    margin: 8rem auto;
-    gap:6.4rem;
-}
-
-.paragraph{
-    margin: 3.2rem 0;
-}
-
-.heading-xl{
-    font-family: inherit;
-    font-size: clamp(5.2rem,6vw,4.241rem);
-    font-weight: 700;
-    line-height: 1.15;
-    letter-spacing: -1px;
-    color: #ffcc70;
-}
-
-.hero-image{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container .banner-image{
-    width: 100%;
-}
-
 /*About-Section */
 
-.section-about{
-    margin: 0 auto 9rem auto;
-}
-
-.container-title {
-    text-align: center;
-    font-size: 3.6rem;
-    font-weight: 700;
-    margin-bottom: 4rem;
-}
-
-.gradient-card {
-    display: grid;
-    gap: 2.4rem;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
-.card {
-    display: flex;
-    height: 100%;
-}
-
-.container-card {
-    flex: 1;
-    padding: 2.4rem;
-    border-radius: 1.6rem;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.12);
-    backdrop-filter: blur(8px);
-    color: #fff;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-}
-
-.bg-blue-box {
-    background: linear-gradient(135deg, rgba(33,101,216,0.18), rgba(40,40,40,0.5));
-}
-
-.card-title {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 1.2rem;
-}
-
-.card-description {
-    font-weight: 600;
-    color: #86c5ff;
-    margin-right: 4px;
-}
-
-.container-card p {
-    margin: 0.8rem 0;
-    font-size: 1.6rem;
-}
-
-@media (max-width: 768px) {
-    .container-title {
-        font-size: 2.8rem;
-    }
-    .container-card p {
-        font-size: 1.5rem;
-    }
-}
-
 /* CONTACT SECTION */
-.section-contact {
-  padding: 0;
-  width: 100%;
-}
 
-/* Title */
-.section-contact .container-title {
-  text-align: center;
-  font-size: 3.6rem;
-  font-weight: 700;
-  color: #ffcc70;
-  margin-bottom: 2rem;
-}
 
-/* Form Wrapper */
-.contact-wrapper {
-  max-width: 50rem;
-  margin: auto;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(10px);
-  border-radius: 1.6rem;
-  padding: 2rem;
-}
 
-/* Input & Textarea */
-.form-control {
-  width: 100%;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 1rem;
-  font-size: 1.4rem;
-  color: #fff;
-  padding: 1.4rem 1.6rem;
-  margin: 1.2rem 0;
-  outline: none;
-  transition: all 0.25s ease-in-out;
-}
-
-/* Hover / Focus Effect */
-.form-control:focus {
-  border-color: #ffcc70;
-  box-shadow: 0px 0px 10px rgba(255,204,112,0.4);
-}
-
-/* Contact Button */
-.frm-btn {
-  background: #ffcc70;
-  color: #202020;
-  font-weight: 700;
-  cursor: pointer;
-  border: none;
-  transition: all 0.25s ease-in-out;
-}
-
-.frm-btn:hover {
-  background: #ffaa2b;
-  transform: translateY(-2px);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .contact-wrapper {
-    padding: 2rem;
-  }
-}
-
-/* Footer Base */
-.footer-section {
-  background-color: #202020;
-  padding: 3rem 0;
-  width: 100%;
-}
-
-/* Inline Footer Layout */
-.footer-section .container {
-  max-width: 130rem;
-  margin: 0 auto;               /* centers content */
-  padding: 0 3rem;              /* left-right spacing */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 3rem;
-  flex-wrap: wrap;
-}
-
-/* Footer Items */
-.footer-contact {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  white-space: nowrap;           /* prevents breaking weirdly */
-}
-
-/* Icon Styling */
-.footer-contact .icon {
-  font-size: 3.5rem;
-  color: #86c5ff;
-}
-
-/* Text Styling */
-.footer-contact-text p:first-child {
-  font-weight: 700;
-  font-size: 1.7rem;
-}
-
-.footer-contact-text p:last-child {
-  font-size: 1.5rem;
-  color: #cccccc;
-}
-
-/* Responsive (stack on mobile) */
-@media (max-width: 768px) {
-  .footer-section .container {
-    flex-direction: column;
-    text-align: center;
-    padding: 0 2rem;
-  }
-}

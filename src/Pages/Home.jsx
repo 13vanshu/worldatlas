@@ -2,6 +2,7 @@ import React from 'react'
 import { FaLongArrowAltRight } from "react-icons/fa";
 import About from './About';
 import Contact from './Contact';
+import './Home.css';
 
 const Home = () => {
   return (

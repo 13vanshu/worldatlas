@@ -1,16 +1,25 @@
-import React from 'react'
-import { useRouteError } from 'react-router-dom'
+import React from "react";
+import { useRouteError, Link } from "react-router-dom";
+import "./Error.css"; 
 
 const Error = () => {
-    const error = useRouteError()
-    console.log(error);
-    
-  return (
-    <div>
-      <h1>Oops! An Error Occured.</h1>
-      {error && <p>{error.data}</p>}
-    </div>
-  )
-}
+  const error = useRouteError();
+  console.error(error);
 
-export default Error
+  return (
+    <div className="error-wrapper">
+      <h1 className="error-code">404</h1>
+      <h2 className="error-title">Oops! Something went wrong.</h2>
+
+      <p className="error-message">
+        {error?.statusText || error?.message || "Unexpected error occurred."}
+      </p>
+
+      <Link to="/" className="error-btn">
+        Go Back Home
+      </Link>
+    </div>
+  );
+};
+
+export default Error;
