@@ -12,6 +12,10 @@ const Country = () => {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("all");
 
+  // 🔹 Pagination state
+  const [currentPage, setCurrentPage] = useState(1);
+  const countriesPerPage = 8;
+
   useEffect(() => {
     startTransition(async () => {
       try {
@@ -22,6 +26,11 @@ const Country = () => {
       }
     });
   }, []);
+
+  // Reset page when filter/search changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [search, filter]);
 
   if (isPending) {
     return <Loader />;
@@ -34,7 +43,7 @@ const Country = () => {
       .includes(search.toLowerCase());
   };
 
-  /* 🌍 Filter + Search combined */
+  /* 🌍 Filter + Search */
   const filteredCountries = countries.filter((country) => {
     const matchesSearch = searchCountry(country);
 
@@ -46,6 +55,19 @@ const Country = () => {
     return matchesSearch && matchesRegion;
   });
 
+  /* 📄 Pagination logic */
+  const indexOfLastCountry = currentPage * countriesPerPage;
+  const indexOfFirstCountry = indexOfLastCountry - countriesPerPage;
+
+  const currentCountries = filteredCountries.slice(
+    indexOfFirstCountry,
+    indexOfLastCountry
+  );
+
+  const totalPages = Math.ceil(
+    filteredCountries.length / countriesPerPage
+  );
+
   return (
     <section className="country-section">
       <SearchFilter
@@ -56,10 +78,31 @@ const Country = () => {
       />
 
       <ul className="grid grid-four-cols">
-        {filteredCountries.map((curCountry, index) => (
+        {currentCountries.map((curCountry, index) => (
           <CountryCard country={curCountry} key={index} />
         ))}
       </ul>
+
+      {/* 🔹 Pagination Buttons */}
+      <div className="pagination">
+        <button
+          disabled={currentPage === 1}
+          onClick={() => setCurrentPage(currentPage - 1)}
+        >
+          Prev
+        </button>
+
+        <span>
+          Page {currentPage} of {totalPages}
+        </span>
+
+        <button
+          disabled={currentPage === totalPages}
+          onClick={() => setCurrentPage(currentPage + 1)}
+        >
+          Next
+        </button>
+      </div>
     </section>
   );
 };
