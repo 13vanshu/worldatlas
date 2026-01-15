@@ -1,0 +1,56 @@
+
+.country-section {
+  padding: 0 4rem; /* desktop */
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.grid-four-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1200px) {
+  .country-section {
+    padding: 0 3rem;
+  }
+
+  .grid-four-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .country-section {
+    padding: 0 2rem;
+  }
+
+  .grid-four-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .country-section {
+    padding: 0 1.2rem;
+  }
+
+  .grid-four-cols {
+    grid-template-columns: 1fr; /* ONE CARD PER ROW */
+  }
+}
+
+@media (max-width: 480px) {
+  .country-section {
+    padding: 0 0.8rem;
+  }
+
+  .grid {
+    gap: 1.2rem;
+  }
+}
