@@ -16,7 +16,7 @@ const Error = () => {
       </p>
 
       <Link to="/" className="error-btn">
-        Go Back Home
+        Go Back Home 
       </Link>
     </div>
   );

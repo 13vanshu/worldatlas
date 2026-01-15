@@ -3,6 +3,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import About from './About';
 import Contact from './Contact';
 import './Home.css';
+import Country from './Country';
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
           </div>
         </div>
         <About />
+        <Country />
         <Contact />
       </main>
     </>

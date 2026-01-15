@@ -1,0 +1,31 @@
+.loader-container {
+  min-height: 100vh; /* full screen loader */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-icon {
+  font-size: 4rem;
+  color: #4f46e5;
+  animation: spin 1s linear infinite;
+  margin-bottom: 12px;
+}
+
+.loader-container p {
+  font-size: 2rem;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

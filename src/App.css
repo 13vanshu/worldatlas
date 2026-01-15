@@ -53,25 +53,6 @@ a {
     }
 }
 
-button {
-    display: flex;
-    gap: 1.2rem;
-    align-items: center;
-    font-family: inherit;
-    font-weight: 1000;
-    font-size: 2.3rem;
-    line-height: 1.5;
-    cursor: pointer;
-    padding: 0.6rem 2.4rem;
-    text-align: center;
-    outline: none;
-    border: none;
-    text-transform: unset;
-    transition: all 0.3 ease-in-out;
-    background: #ffcc70;
-    border-radius: 1.5rem;
-    color: #000;
-}
 
 .container {
     max-width: 140rem;
@@ -93,12 +74,6 @@ button {
 .grid-four-cols {
     grid-template-columns: repeat(4, 1fr);
 }
-
-/* hero Section */
-
-/*About-Section */
-
-/* CONTACT SECTION */
 
 
 

@@ -1,27 +1,38 @@
-import React from 'react'
-import usefetch from '../Hooks/usefetch';
-import CountryCard from '../Component/Layout/CountryCard';
+import { useEffect, useState, useTransition } from 'react';
+import { getCountryData } from '../Api/Postapi';
 import './Country.css';
+import Loader from './Loader';
+import CountryCard from '../Component/Layout/CountryCard';
 
 const Country = () => {
-  const { data, load, error } = usefetch(
-        "https://restcountries.com/v3.1/all?fields=name,capital,flags,population,region,subregion,currencies,languages"
-    );
-    
-    console.log(data);
-    
+
+  const [isPending, startTransition] = useTransition();
+  const [countries, setCountries] = useState([]);
+
+  useEffect(() => {
+    startTransition(async () => {
+      try {
+        const res = await getCountryData();
+        setCountries(res.data); 
+      } catch (error) {
+        console.error(error);
+      }
+    });
+  }, []);
+
+  if (isPending) {
+    return <Loader />;
+  }
+
   return (
-    <section className='country-section'>
-      <ul className='grid grid-four-cols'>
-        {
-         data.map((curcountry) => {
-          return <CountryCard data = 
-          {curcountry} />
-         })
-        }
+    <section className="country-section">[]
+      <ul className="grid grid-four-cols">
+        {countries.map((curCountry, index) => (
+          <CountryCard country={curCountry} key={index} />
+        ))}
       </ul>
     </section>
-  )
-}
+  );
+};
 
-export default Country
+export default Country;
