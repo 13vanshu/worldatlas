@@ -8,23 +8,23 @@ const CountryCard = ({ country }) => {
   const {flags, name, population, region, capital} = country;
 
   return <li className="country country-card">
-    <div className="container-card bg-white-box">
+    <div className="countrycard-container-card countrycard-bg-white-box">
       <img src={flags.svg} alt={name.alt} />
-      <div className='countryInfo'>
-        <p className='card-title'>{name.common}</p>
+      <div className='countrycard-countryInfo'>
+        <p className='countrycard-card-title'>{name.common}</p>
         <p>
-          <span className='card-description'>Population:</span>
+          <span className='countrycard-card-description'>Population:</span>
           {population.toLocaleString()}
         </p>
         <p>
-          <span className='card-description'>Region: </span>{region}
+          <span className='countrycard-card-description'>Region: </span>{region}
         </p>
         <p>
-          <span className='card-description'>Capital: </span>
+          <span className='countrycard-card-description'>Capital: </span>
           {capital[0]}
         </p>
         <NavLink to={`/country/${name.common}`}>
-          <button className="learn-more">Learn More</button>
+          <button className="countrycard-learn-more">Learn More</button>
         </NavLink>
       </div>
     </div>

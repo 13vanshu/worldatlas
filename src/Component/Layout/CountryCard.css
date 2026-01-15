@@ -1,73 +1,108 @@
-/* grid already assumed */
-.country-section {
-  padding: 2rem;
-}
-
-.grid {
-  display: grid;
-  gap: 2rem;
-}
-
-.grid-four-cols {
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-}
-
-/* card */
-.country-card {
+/* list item */
+.country {
   list-style: none;
+
+}
+.country-section {
+  padding: 0 4rem;   /* left & right space */
 }
 
-.bg-white-box {
+/* card container */
+.countrycard-container-card {
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  
+  height: 100%;
+  padding: 2rem;
 }
 
-.bg-white-box:hover {
+.countrycard-container-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
 }
 
-/* flag */
-.container-card img {
+/* flag image */
+.countrycard-container-card img {
   width: 100%;
-  height: 160px;
+  height: 140px;
   object-fit: cover;
   display: block;
-
 }
 
-/* content */
-.countryInfo {
-  background: #fff;
-  width: 280px;
-}
-.countryInfo p {
-  font-size: 16px;
-  color: #444;
-  margin: 6px 0;
+/* content box */
+.countrycard-countryInfo {
+  padding: 1rem;
 }
 
-
-.card-description {
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 12px;
+/* country name */
+.countrycard-card-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.4px;
 }
 
-.learn-more {
-  padding: 8px 14px;
-  background-color: #2563eb;
-  color: #fff;
+/* info text */
+.countrycard-countryInfo p {
+  font-size: 1.4rem;
+  margin: 0.4rem 10;
+  color: #374151;
+  line-height: 1.3;
+}
+
+/* label text */
+.countrycard-card-description {
+  font-weight: 1000;
+  color: #111827;
+  margin-right: 4px;
+}
+
+/* learn more button */
+.countrycard-learn-more {
+  margin-top: 1rem;
+  padding: 0.55rem 1.1rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
   cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.learn-more:hover {
-  background-color: #1e40af;
+.countrycard-learn-more:hover {
+  background: #1e40af;
+  transform: scale(1.05);
 }
+
+/* remove NavLink underline */
+.countrycard-countryInfo a {
+  text-decoration: none;
+}
+
+/* tablet */
+@media (max-width: 1024px) {
+  .country-section {
+    padding: 0 2.5rem;
+  }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .country-section {
+    padding: 0 1.2rem;
+  }
+}
+
+/* small mobile */
+@media (max-width: 480px) {
+  .country-section {
+    padding: 0 0.8rem;
+  }
+}
+

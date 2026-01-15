@@ -2,25 +2,25 @@
     margin: 0 auto 9rem auto;
 }
 
-.container-title {
+.about-container-title {
     text-align: center;
     font-size: 3.6rem;
     font-weight: 700;
     margin-bottom: 4rem;
 }
 
-.gradient-card {
+.about-gradient-card {
     display: grid;
     gap: 2.4rem;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-.card {
+.about-card {
     display: flex;
     height: 100%;
 }
 
-.container-card {
+.about-container-card {
     flex: 1;
     padding: 2.4rem;
     border-radius: 1.6rem;
@@ -34,33 +34,33 @@
     justify-content: space-between;
 }
 
-.bg-blue-box {
+.about-bg-blue-box {
     background: linear-gradient(135deg, rgba(33, 101, 216, 0.18), rgba(40, 40, 40, 0.5));
 }
 
-.card-title {
+.about-card-title {
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: 1.2rem;
 }
 
-.card-description {
+.about-card-description {
     font-weight: 600;
     color: #86c5ff;
     margin-right: 4px;
 }
 
-.container-card p {
+.about-container-card p {
     margin: 0.8rem 0;
     font-size: 1.6rem;
 }
 
 @media (max-width: 768px) {
-    .container-title {
+    .about-container-title {
         font-size: 2.8rem;
     }
 
-    .container-card p {
+    .about-container-card p {
         font-size: 1.5rem;
     }
 }

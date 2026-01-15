@@ -18,7 +18,7 @@ const Home = () => {
               Discover the history, culture, and geography of every nation. Sort,
               search, and learn about countries around the globe with our comprehensive
             </p>
-            <button className='btn btn-darker btn-inline bg-white-box'>
+            <button className='btn'>
               Start Explore <FaLongArrowAltRight />
             </button>
           </div>
