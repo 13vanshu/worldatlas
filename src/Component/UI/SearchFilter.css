@@ -1,0 +1,71 @@
+/* Container */
+.section-searchFilter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Search Input */
+.section-searchFilter-container input {
+  width: 100%;
+  max-width: 320px;
+  padding: 12px 14px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.section-searchFilter-container input:focus {
+  border-color: #2b6cb0;
+  box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.15);
+}
+
+/* Select Wrapper */
+.section-searchFilter-container div {
+  width: 200px;
+}
+
+/* Select */
+.select-filter {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #ffffff;
+  cursor: pointer;
+  outline: none;
+}
+
+.select-filter:focus {
+  border-color: #2b6cb0;
+  box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.15);
+}
+
+/* ✅ Mobile Fix */
+@media (max-width: 768px) {
+  .section-searchFilter-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .section-searchFilter-container input,
+  .section-searchFilter-container div,
+  .select-filter {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}

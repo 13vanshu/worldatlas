@@ -1,6 +1,6 @@
 import React from 'react'
 import './CountryDetails.css'
-import { useParams } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 import { useEffect, useState, useTransition } from 'react';
 import { getCountryIndData } from '../../Api/Postapi';
 import Loader from '../../Pages/Loader';
@@ -87,11 +87,14 @@ const CountryDetails = () => {
             </div>
           </div>
         </div>
+        <div className='country-card-backbtn'>
+          <NavLink to="/country" className="back-btn">
+            <button> Go Back</button>
+          </NavLink>
+        </div>
       </div>
     </section>
   )
-
-
 }
 
 export default CountryDetails

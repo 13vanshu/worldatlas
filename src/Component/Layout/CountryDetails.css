@@ -96,6 +96,41 @@
   }
 }
 
+.country-card-backbtn {
+  display: flex;
+  justify-content: flex-end; /* aligns right */
+  margin: 20px ;
+}
+
+
+.back-btn {
+  text-decoration: none;
+}
+
+.back-btn button {
+  background: #2b6cb0;          /* blue shade */
+  color: #ffffff;
+  border: none;
+  padding: 10px 22px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.back-btn button:hover {
+  background: #1e4e8c;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn button:active {
+  transform: scale(0.98);
+}
+
+
 @media (max-width: 480px) {
   .container-card {
     padding: 1.5rem 1rem;
