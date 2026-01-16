@@ -92,7 +92,7 @@ const Country = () => {
           Prev
         </button>
 
-        <span>
+        <span className="page-info">
           Page {currentPage} of {totalPages}
         </span>
 
