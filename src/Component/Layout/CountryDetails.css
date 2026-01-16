@@ -1,83 +1,101 @@
-/* Container */
+/* ===== Root Section ===== */
 .country-details-card {
-  padding: 3rem 1rem;
+  padding: 2rem;
   display: flex;
   justify-content: center;
 }
 
-/* Card */
+/* ===== Card Container ===== */
 .container-card {
   max-width: 1100px;
   width: 100%;
-  background: #ffffff;
-  border-radius: 14px;
   padding: 2rem;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* Grid layout */
+/* ===== Grid Layout ===== */
 .grid {
   display: grid;
   gap: 2rem;
 }
 
 .grid-two-cols {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   align-items: center;
 }
 
-/* Flag image */
-.country-image img.flag {
+/* ===== Flag Image ===== */
+.flag {
   width: 100%;
+  height: auto;
   max-height: 320px;
   object-fit: contain;
   border-radius: 10px;
-  border: 1px solid #eee;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-/* Content */
+/* ===== Content ===== */
 .country-content {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
 
-/* Country title */
 .card-title {
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  color: #1f2937;
+  color: #1e293b;
   margin-bottom: 0.5rem;
 }
 
-/* Info container */
+/* ===== Info Section ===== */
 .infoContainer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 0.8rem 1.5rem;
 }
 
-/* Text rows */
 .infoContainer p {
-  font-size: 1.3rem;
-  color: #374151;
+  font-size: 0.95rem;
+  color: #334155;
   line-height: 1.5;
 }
 
-/* Labels */
 .card-description {
   font-weight: 600;
-  color: #111827;
-  margin-right: 6px;
+  color: #0f172a;
+  margin-right: 4px;
 }
 
-/* Background helper */
-.bg-white-box {
-  background-color: #fff;
+/* ===== Back Button ===== */
+.country-card-backbtn {
+  margin-top: 2rem;
+  text-align: left;
 }
 
-/* ------------------ Responsive ------------------ */
-@media (max-width: 900px) {
+.back-btn button {
+  padding: 10px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #2563eb;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.back-btn button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.35);
+}
+
+/* ================================================= */
+/* 📱 Responsive Design */
+/* ================================================= */
+
+/* Tablets */
+@media (max-width: 992px) {
   .grid-two-cols {
     grid-template-columns: 1fr;
   }
@@ -88,59 +106,33 @@
 
   .card-title {
     font-size: 1.6rem;
-    text-align: center;
-  }
-
-  .country-image img.flag {
-    max-height: 250px;
   }
 }
 
-.country-card-backbtn {
-  display: flex;
-  justify-content: flex-end; /* aligns right */
-  margin: 20px ;
-}
+/* Mobile */
+@media (max-width: 576px) {
+  .country-details-card {
+    padding: 1rem;
+  }
 
-
-.back-btn {
-  text-decoration: none;
-}
-
-.back-btn button {
-  background: #2b6cb0;          /* blue shade */
-  color: #ffffff;
-  border: none;
-  padding: 10px 22px;
-  font-size: 16px;
-  font-weight: 500;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-.back-btn button:hover {
-  background: #1e4e8c;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-.back-btn button:active {
-  transform: scale(0.98);
-}
-
-
-@media (max-width: 480px) {
   .container-card {
-    padding: 1.5rem 1rem;
+    padding: 1.2rem;
   }
 
   .card-title {
     font-size: 1.4rem;
+    text-align: center;
   }
 
-  .infoContainer p {
-    font-size: 0.9rem;
+  .flag {
+    max-height: 220px;
+  }
+
+  .country-card-backbtn {
+    text-align: center;
+  }
+
+  .back-btn button {
+    width: 100%;
   }
 }
